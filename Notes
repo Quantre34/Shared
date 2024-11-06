@@ -3,3 +3,8 @@
   builder.Services.AddHostedService<Worker>();
 
 -dotnet publish -c Release -r win-x86 --self-contained -o ./publish
+
+
+var assembly = Assembly.LoadFrom("path_to_NetOpenX50.dll");
+var type = assembly.GetType("NetOpenX50.Kernel");
+Console.WriteLine(type?.Name);
