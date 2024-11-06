@@ -1,0 +1,5 @@
+- In Program.cs, make sure to configure HttpClient for the worker:
+  builder.Services.AddHttpClient();
+  builder.Services.AddHostedService<Worker>();
+
+-dotnet publish -c Release -r win-x86 --self-contained -o ./publish
